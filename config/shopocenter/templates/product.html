@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<div class="card h-100">
+ <div class="row">
+    <div class="col-sm-4">
+            <img class="card-img-top" src="{{ product.image.url }}" alt="" style="width: 80%; height: 300px;">
+        </div>
+    <div class="col-sm-7">
+        <h3 class="text-center">{{ product.title }}</h3>
+        <p>{% lorem %}</p>
+        <p>{% lorem %}</p>
+        <hr>
+        <p>Цена: {{ product.price }} сом</p>
+        <a href="{% url 'shopocenter:add_to_cart' product_slug=product.slug %}"><button class="btn btn-danger">Добавить в корзину</button></a>
+    </div>
+   </div>
+</div>
+<div class="div">lskndclsd</div>
+{% endblock %}
